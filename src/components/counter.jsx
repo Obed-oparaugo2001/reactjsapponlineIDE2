@@ -8,16 +8,13 @@ export default class Counter extends Component{
   handleIncrement(){
 
     console.log('increase button clicked')
-    let increase = this.state.counter + 1
-    const counter = this.state.counter
-    setState({counter:increase})
   }
   render(){
 
     return(
       <>
         <div>
-           <span id="span">{this.formatCount}</span> <button className="increase-btn" onClick={this.handleIncrement}>increase</button>
+           <span id="span">{this.formatCount()}</span> <button className="increase-btn" onClick={this.handleIncrement}>increase</button>
         </div>
       </>
     )
