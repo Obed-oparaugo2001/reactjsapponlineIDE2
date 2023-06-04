@@ -3,14 +3,25 @@ import Counter from './components/counter'
 
 export default class Counters extends Component{
 
-  state={}
+  state={
+    counters=[
+      {id:1,value:0},
+      {id:2,value:0}, 
+      {id:3,value:0},
+      {id:4,value:0}
+    ]
+  }
 
   render(){
 
     return (
-      <React.fragment>
-       <Counter/>
-      </React.fragment>
+      <>
+       <div>
+         <h1>Items</h1>
+       {this.state.counters.map(c=>{ <Counter key={c.id}/> })} 
+       
+       </div>
+      </>
     )
   }
 }

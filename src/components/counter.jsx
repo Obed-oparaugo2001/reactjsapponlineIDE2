@@ -5,8 +5,10 @@ export default class Counter extends Component{
     counter:0,
   }
 
-  handleIncrement(){
-
+  handleIncrement= ()=>{
+    const count = this.state.counter;
+    const newCount= count + 1;
+    this.setState({count:newCount});
     console.log('increase button clicked')
   }
   render(){
@@ -19,7 +21,7 @@ export default class Counter extends Component{
       </>
     )
   }
-  formatCount =()=>{
-    const counter = this.state.counter;
-   return counter == 0 ? "Zero" : counter }
+  formatCount = ()=>{
+    const count = this.state.counter;
+   return count == 0 ? "Zero" : count }
 }
